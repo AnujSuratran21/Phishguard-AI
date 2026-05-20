@@ -1,0 +1,62 @@
+services:
+
+  backend:
+
+    build: ./backend
+
+    container_name: phishguard_backend
+
+    ports:
+      - "8000:8000"
+
+    env_file:
+      - ./backend/.env
+
+    depends_on:
+      - postgres
+
+    volumes:
+      - ./backend:/app
+
+
+  frontend:
+
+    build: ./frontend
+
+    container_name: phishguard_frontend
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+    volumes:
+      - ./frontend:/app
+
+
+  postgres:
+
+    image: postgres:17
+
+    container_name: phishguard_postgres
+
+    environment:
+      POSTGRES_USER: phishuser
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_DB: phishguard
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+  redis:
+
+    image: redis:7
+
+    container_name: phishguard_redis
+
+
+volumes:
+
+  postgres_data:
