@@ -1,4 +1,4 @@
-k# 🛡️ PhishGuard AI
+# 🛡️ PhishGuard AI
 
 AI-powered phishing URL detection and threat intelligence platform built using FastAPI, React, Machine Learning, PostgreSQL, Docker, and cybersecurity APIs.
 
@@ -181,53 +181,3 @@ Final Threat Classification
        │
        ▼
 PostgreSQL Database
-
-phishguard-ai/
-│
-├── backend/
-│   ├── app/
-│   ├── ml/
-│   ├── models/
-│   ├── services/
-│   └── api/
-│
-├── frontend/
-│   ├── src/
-│   ├── components/
-│   └── pages/
-│
-├── docker-compose.yml
-│
-└── README.md
-
-
-Start Project
-docker compose up --build
-
-Frontend
-http://localhost:5173
-
-Backend API
-http://localhost:8000
-
-Swagger Documentation
-http://localhost:8000/docs
-
-
-🧪 Example Test URLs
-
-✅ Safe URLs
-https://google.com
-https://github.com
-https://onlinesbi.sbi
-
-❌ Phishing URLs
-http://verify-bank-login.cc
-http://free-crypto-bonus.ru
-
-⚠️ Suspicious URLs
-http://secure-login-check.net
-http://account-verification-alert.org
-http://banking-update-portal.info
-http://signin-security-check.xyz
-http://wallet-authentication.live
