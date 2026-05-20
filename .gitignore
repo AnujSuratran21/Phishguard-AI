@@ -8,3 +8,4 @@ build/
 *.pkl
 .DS_Store
 Thumbs.db
+backend/dataset/
